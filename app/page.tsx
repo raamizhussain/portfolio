@@ -233,14 +233,14 @@ export default function FuturisticPortfolio() {
                   RAAMIZ HUSSAIN SHIKOH
                 </span>
               </h1>
-              <div className="text-xl md:text-2xl text-cyan-300 font-light tracking-wider mb-2 typewriter">
+              <div className="text-base sm:text-lg md:text-2xl text-cyan-300 font-light tracking-wide mb-3 text-center typewriter">
                 COMPUTER SCIENCE STUDENT at SRM 
               </div>
-              <div className="h-1 w-32 bg-gradient-to-r from-cyan-400 to-purple-400 mx-auto glow-line"></div>
+              <div className="h-0.5 sm:h-1 w-24 sm:w-32 bg-gradient-to-r from-cyan-400 to-purple-400 mx-auto glow-line"></div>
             </div>
 
             {/* Tagline */}
-            <p className="text-2xl md:text-3xl lg:text-4xl font-bold mb-12 max-w-4xl mx-auto leading-tight">
+            <p className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold mb-8 sm:mb-12 max-w-4xl mx-auto leading-snug text-center">
               <span className="text-white">Building </span>
               <span className="text-cyan-400 glow-text">code</span>
               <span className="text-white">. Pushing </span>
