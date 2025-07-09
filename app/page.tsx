@@ -170,14 +170,14 @@ export default function FuturisticPortfolio() {
             </div>
 
             <div className="flex items-center space-x-4">
-              <Button
+              {/* <Button
                 variant="ghost"
                 size="icon"
                 onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
                 className="rounded-full hover:bg-cyan-500/10 hover:text-cyan-400 transition-all duration-300"
               >
                 {theme === "dark" ? <Sun className="h-5 w-5" /> : <Moon className="h-5 w-5" />}
-              </Button>
+              </Button> */}
 
               {/* Mobile menu button */}
               <Button
@@ -389,9 +389,12 @@ export default function FuturisticPortfolio() {
               <TabsTrigger value="ml" className="futuristic-tab">
                 Machine Learning
               </TabsTrigger>
+
               <TabsTrigger value="tools" className="futuristic-tab">
                 Tools
               </TabsTrigger>
+
+
             </TabsList>
 
             <TabsContent value="languages">
@@ -452,17 +455,20 @@ export default function FuturisticPortfolio() {
               </div>
             </TabsContent>
 
+            
+
             <TabsContent value="tools">
               <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
                 {[
-                  { name: "Git/GitHub", level: 90, color: "from-orange-400 to-red-500" },
+                  { name: "Git/GitHub", level: 80, color: "from-orange-400 to-red-500" },
                   { name: "VS Code", level: 95, color: "from-blue-400 to-blue-600" },
-                  { name: "Docker", level: 75, color: "from-blue-500 to-cyan-500" },
-                  { name: "AWS", level: 70, color: "from-yellow-400 to-orange-500" },
-                  { name: "MongoDB", level: 82, color: "from-green-400 to-green-600" },
-                  { name: "PostgreSQL", level: 78, color: "from-blue-600 to-blue-800" },
-                  { name: "Firebase", level: 85, color: "from-yellow-400 to-red-500" },
-                  { name: "Figma", level: 80, color: "from-purple-400 to-pink-500" },
+                  { name: "Kaggle", level: 80, color: "from-blue-500 to-cyan-500" },
+                  { name: "Jupyter", level: 90, color: "from-blue-600 to-blue-800" },
+                  { name: "Google Colab", level: 70, color: "from-yellow-400 to-orange-500" },
+                  { name: "Figma", level: 90, color: "from-green-400 to-green-600" },
+                  
+                  { name: "Excel", level: 75, color: "from-yellow-400 to-red-500" },
+                  { name: "Streamlit", level: 75, color: "from-purple-400 to-pink-500" },
                 ].map((skill) => (
                   <div key={skill.name} className="skill-card group">
                     <div className="skill-icon">
@@ -492,106 +498,100 @@ export default function FuturisticPortfolio() {
             Featured Projects
           </h2>
 
-          <div className="grid lg:grid-cols-2 xl:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {[
+              
               {
-                title: "AI-Powered E-Commerce Platform",
+                title: "Fake News Detector (Coming Soon)",
                 description:
-                  "Full-stack e-commerce solution with AI recommendations, real-time chat, and advanced analytics dashboard.",
-                tech: ["Next.js", "TypeScript", "Python", "TensorFlow", "PostgreSQL"],
-                category: "Full Stack",
-                image: "/placeholder.svg?height=300&width=400",
-                featured: true,
+                  "Detecting fake news using text, images and video with BERT, CNN, and Grad-CAM. Includes explainable predictions and a real-time dashboard.",
+                tech: ["Python", "BERT", "CNN", "Streamlit", "Grad-CAM"],
+                category: "Multi-modal AI system",
+                featured: false,
+                code: "https://github.com/raamizhussain/Fake-News-Detector",
               },
               {
-                title: "Real-Time Collaboration Tool",
+                title: "Shirt Colour Detector",
                 description:
-                  "Slack-like collaboration platform with video calls, file sharing, and project management features.",
-                tech: ["React", "Node.js", "Socket.io", "MongoDB", "WebRTC"],
-                category: "Web App",
-                image: "/placeholder.svg?height=300&width=400",
-                featured: true,
-              },
-              {
-                title: "Machine Learning Stock Predictor",
-                description: "Advanced ML model for stock price prediction using LSTM networks and sentiment analysis.",
-                tech: ["Python", "TensorFlow", "Pandas", "Flask", "React"],
-                category: "AI/ML",
-                image: "/placeholder.svg?height=300&width=400",
+                  "Advanced computer vision system for analysing shirt colours in images and videos. Supports YOLOv5, YOLOv8, and DETR with clustering, analytics, and a real-time dashboard.",
+                tech: ["Python", "YOLOv5/v8", "DETR", "OpenCV", "Streamlit", "K-Means", "Matplotlib"],
+                category: "Visual Intelligence",
                 featured: false,
+                code: "https://github.com/raamizhussain/Shirt-Color-Detector",
               },
               {
-                title: "Blockchain Voting System",
+                title: "Age and Gender Detector",
                 description:
-                  "Secure, transparent voting system built on Ethereum with smart contracts and web3 integration.",
-                tech: ["Solidity", "Web3.js", "React", "Ethereum", "IPFS"],
-                category: "Blockchain",
-                image: "/placeholder.svg?height=300&width=400",
+                  "Built a real-time face analysis tool using CNNs to predict age and gender from webcam or uploaded images.",
+                tech: ["Python", "TensorFlow", "OpenCV", "Streamlit"],
+                category: "Computer Vision",
                 featured: false,
-              },
-              {
-                title: "Smart City IoT Dashboard",
-                description:
-                  "IoT dashboard for smart city management with real-time sensor data and predictive analytics.",
-                tech: ["Vue.js", "Python", "InfluxDB", "Grafana", "MQTT"],
-                category: "IoT",
-                image: "/placeholder.svg?height=300&width=400",
-                featured: false,
-              },
-              {
-                title: "AR Mobile Game",
-                description: "Augmented reality mobile game with multiplayer support and social features.",
-                tech: ["Unity", "C#", "ARCore", "Firebase", "Photon"],
-                category: "Mobile/AR",
-                image: "/placeholder.svg?height=300&width=400",
-                featured: false,
+                code: "https://github.com/raamizhussain/Age-Gender-Detector",
               },
             ].map((project, index) => (
-              <div key={index} className={`project-card ${project.featured ? "featured-project" : ""} group`}>
-                <div className="project-image-container">
-                  <Image
-                    src={project.image || "/placeholder.svg"}
-                    alt={project.title}
-                    width={400}
-                    height={300}
-                    className="project-image"
-                  />
-                  <div className="project-overlay">
-                    <div className="project-overlay-content">
-                      <Button className="futuristic-btn futuristic-btn-primary mr-3">
-                        <Github className="mr-2 h-4 w-4" />
-                        Code
-                      </Button>
-                      <Button className="futuristic-btn futuristic-btn-secondary">
-                        <ExternalLink className="mr-2 h-4 w-4" />
-                        Live
-                      </Button>
-                    </div>
-                  </div>
-                </div>
+              <div
+                key={index}
+                className={`group rounded-xl border bg-card p-5 shadow-sm hover:shadow-md transition flex flex-col justify-between min-h-[320px] ${
+                  project.featured ? "border-yellow-400" : ""
+                }`}
+              >
+                <div>
+                  <div className="flex items-center justify-between mb-2">
+                    {/* Gradient Category Badge */}
+                    <Badge className="text-xs">{project.category}</Badge>
 
-                <div className="project-content">
-                  <div className="flex items-center justify-between mb-3">
-                    <Badge className="project-badge">{project.category}</Badge>
+
                     {project.featured && <Star className="h-5 w-5 text-yellow-400" />}
                   </div>
 
-                  <h3 className="project-title">{project.title}</h3>
-                  <p className="project-description">{project.description}</p>
+                  <h3 className="text-base font-semibold mb-1">{project.title}</h3>
+                  <p className="text-sm text-muted-foreground line-clamp-3">{project.description}</p>
 
-                  <div className="project-tech">
+                  <div className="flex flex-wrap gap-2 mt-3">
                     {project.tech.map((tech) => (
-                      <span key={tech} className="tech-tag">
+                      <span
+                        key={tech}
+                        className="text-xs bg-gray-200 dark:bg-gray-700 px-2 py-1 rounded"
+                      >
                         {tech}
                       </span>
                     ))}
                   </div>
                 </div>
+
+                {/* 🔥 Tighter gap to button row */}
+                <div className="mt-3 flex gap-2">
+                  <a href={project.code} target="_blank" rel="noopener noreferrer">
+                    <Button
+                      size="sm"
+                      className="flex items-center gap-1 text-white bg-[#2ea043] hover:bg-[#27963e]"
+                    >
+                      <Github className="h-4 w-4" />
+                      Code
+                    </Button>
+                  </a>
+
+                  {/* Live button still commented out for later use */}
+                  {/*
+                  <Button
+                    size="sm"
+                    variant="secondary"
+                    className="flex items-center gap-1"
+                  >
+                    <ExternalLink className="h-4 w-4" />
+                    Live
+                  </Button>
+                  */}
+                </div>
               </div>
+
             ))}
           </div>
         </div>
       </section>
+
+
+
 
       {/* Education Section */}
       <section id="education" className="py-32 px-4 relative z-10">
@@ -606,25 +606,25 @@ export default function FuturisticPortfolio() {
               {
                 degree: "Bachelor of Technology - Computer Science Engineering",
                 institution: "SRM Institute of Science and Technology",
-                duration: "2022 - 2026",
-                grade: "CGPA: 8.7/10",
+                duration: "2023 - 2027",
+                grade: "CGPA: 9.63/10",
                 description:
-                  "Specializing in Software Engineering and Web Technologies. Active member of coding club and hackathon participant.",
+                  "Specializing in Machine Learning and Data Science, with a strong focus on real-world AI applications. Continuously learning and building through personal projects.",
                 current: true,
               },
               {
-                degree: "Higher Secondary Certificate (12th)",
-                institution: "Delhi Public School",
-                duration: "2020 - 2022",
-                grade: "92.5%",
-                description: "Science stream with Computer Science. School topper in Computer Science and Mathematics.",
+                degree: "Higher Secondary Certificate (12th) - CBSE",
+                institution: "Kendriya Vidyalaya Hebbal, Bangalore",
+                duration: "2022 - 2023",
+                grade: "82%",
+                description: "Completed 12th in Science stream. Participated in KVS Nationals at Delhi for Badminton representing Bangalore region.",
                 current: false,
               },
               {
-                degree: "Secondary School Certificate (10th)",
-                institution: "Delhi Public School",
-                duration: "2018 - 2020",
-                grade: "95.2%",
+                degree: "Secondary School Certificate (10th) - CBSE",
+                institution: "Kendriya Vidyalaya Hebbal, Bangalore",
+                duration: "2020 - 2021",
+                grade: "93.8%",
                 description: "All-rounder student with excellence in academics and extracurricular activities.",
                 current: false,
               },
@@ -666,41 +666,18 @@ export default function FuturisticPortfolio() {
           <div className="space-y-8">
             {[
               {
-                role: "Frontend Developer Intern",
-                company: "TechStart Solutions",
-                duration: "Jun 2024 - Aug 2024",
-                type: "Internship",
+                role: "Machine Learning Intern  ",
+                // company: "TechStart Solutions",
+                duration: "June 2025 - July 2025",
+                type: " Internship ",
                 responsibilities: [
-                  "Developed responsive web applications using React and TypeScript",
-                  "Collaborated with design team to implement pixel-perfect UI components",
-                  "Optimized application performance resulting in 40% faster load times",
-                  "Participated in code reviews and agile development processes",
+                  "Fine-tuned a pre-trained CNN (VGGFace) on the IMDB-WIKI dataset for accurate age prediction",
+                  "Built a logic-based gender classifier that dynamically adapts based on hair length and age range (20–30), with a custom GUI",
+                  "Developed a computer vision model to detect car colours, count vehicles, and identify people at traffic signals",
+                  "Designed interactive GUIs for all models to support real-time testing and visualization of predictions",
                 ],
               },
-              {
-                role: "Full Stack Developer",
-                company: "Freelance",
-                duration: "Jan 2024 - Present",
-                type: "Freelance",
-                responsibilities: [
-                  "Built custom websites for small businesses and startups",
-                  "Implemented e-commerce solutions with payment gateway integration",
-                  "Provided ongoing maintenance and technical support",
-                  "Managed client relationships and project timelines",
-                ],
-              },
-              {
-                role: "Teaching Assistant",
-                company: "SRM University - CS Department",
-                duration: "Aug 2023 - Dec 2023",
-                type: "Part-time",
-                responsibilities: [
-                  "Assisted professors in Data Structures and Algorithms course",
-                  "Conducted lab sessions for 50+ students",
-                  "Helped students with programming assignments and debugging",
-                  "Graded assignments and provided constructive feedback",
-                ],
-              },
+              
             ].map((exp, index) => (
               <div key={index} className="experience-card group">
                 <div className="experience-header">
@@ -712,7 +689,7 @@ export default function FuturisticPortfolio() {
                       <h3 className="text-2xl font-bold text-white">{exp.role}</h3>
                       <Badge className="experience-type-badge">{exp.type}</Badge>
                     </div>
-                    <p className="text-cyan-400 font-semibold text-lg mb-1">{exp.company}</p>
+                    {/* <p className="text-cyan-400 font-semibold text-lg mb-1">{exp.company}</p> */}
                     <p className="text-slate-400">{exp.duration}</p>
                   </div>
                 </div>
@@ -743,41 +720,41 @@ export default function FuturisticPortfolio() {
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {[
               {
-                title: "React Developer Certification",
-                platform: "Meta (Coursera)",
-                date: "2024",
+                title: "Cloud Computing Fundamentals",
+                platform: "NPTEL",
+                date: "2025",
                 color: "from-blue-400 to-cyan-400",
               },
               {
-                title: "AWS Cloud Practitioner",
-                platform: "Amazon Web Services",
-                date: "2024",
+                title: "DataBase Management Systems",
+                platform: "NPTEL",
+                date: "2025",
                 color: "from-orange-400 to-yellow-400",
               },
               {
                 title: "Full Stack Web Development",
-                platform: "freeCodeCamp",
-                date: "2023",
+                platform: "Udemy",
+                date: "2025",
                 color: "from-green-400 to-emerald-400",
               },
               {
-                title: "Machine Learning Specialization",
-                platform: "Stanford (Coursera)",
+                title: "Java Programming",
+                platform: "NPTEL",
                 date: "2024",
                 color: "from-purple-400 to-pink-400",
               },
               {
-                title: "JavaScript Algorithms & Data Structures",
-                platform: "freeCodeCamp",
-                date: "2023",
+                title: "Advanced Python Programming",
+                platform: "Udemy",
+                date: "2024",
                 color: "from-yellow-400 to-orange-400",
               },
-              {
-                title: "Google Cloud Associate",
-                platform: "Google Cloud",
-                date: "2024",
-                color: "from-red-400 to-pink-400",
-              },
+              // {
+              //   title: "Google Cloud Associate",
+              //   platform: "Google Cloud",
+              //   date: "2024",
+              //   color: "from-red-400 to-pink-400",
+              // },
             ].map((cert, index) => (
               <div key={index} className="certification-card group">
                 <div className={`certification-icon bg-gradient-to-br ${cert.color}`}>
@@ -787,10 +764,10 @@ export default function FuturisticPortfolio() {
                   <h3 className="certification-title">{cert.title}</h3>
                   <p className="certification-platform">{cert.platform}</p>
                   <p className="certification-date">{cert.date}</p>
-                  <Button className="certification-btn">
+                  {/* <Button className="certification-btn">
                     <ExternalLink className="mr-2 h-4 w-4" />
                     View Certificate
-                  </Button>
+                  </Button> */}
                 </div>
               </div>
             ))}
@@ -808,46 +785,46 @@ export default function FuturisticPortfolio() {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {[
+              // {
+              //   title: "Smart India Hackathon 2024",
+              //   award: "🏆 Winner",
+              //   year: "2024",
+              //   description: "Developed an AI-powered solution for traffic management in smart cities.",
+              //   color: "from-yellow-400 to-orange-400",
+              // },
+              // {
+              //   title: "SRM Hackathon",
+              //   award: "🥈 2nd Place",
+              //   year: "2024",
+              //   description: "Created a sustainable energy monitoring system for residential buildings.",
+              //   color: "from-gray-300 to-gray-500",
+              // },
+              // {
+              //   title: "CodeChef Monthly Contest",
+              //   award: "⭐ 3-Star Rating",
+              //   year: "2023",
+              //   description: "Achieved 3-star rating with consistent performance in competitive programming.",
+              //   color: "from-purple-400 to-pink-400",
+              // },
+              // {
+              //   title: "Google Developer Student Club",
+              //   award: "👑 Core Team Member",
+              //   year: "2023-2024",
+              //   description: "Led workshops on web development and organized tech events for 200+ students.",
+              //   color: "from-blue-400 to-cyan-400",
+              // },
               {
-                title: "Smart India Hackathon 2024",
-                award: "🏆 Winner",
-                year: "2024",
-                description: "Developed an AI-powered solution for traffic management in smart cities.",
-                color: "from-yellow-400 to-orange-400",
-              },
-              {
-                title: "SRM Hackathon",
-                award: "🥈 2nd Place",
-                year: "2024",
-                description: "Created a sustainable energy monitoring system for residential buildings.",
-                color: "from-gray-300 to-gray-500",
-              },
-              {
-                title: "CodeChef Monthly Contest",
-                award: "⭐ 3-Star Rating",
-                year: "2023",
-                description: "Achieved 3-star rating with consistent performance in competitive programming.",
-                color: "from-purple-400 to-pink-400",
-              },
-              {
-                title: "Google Developer Student Club",
-                award: "👑 Core Team Member",
-                year: "2023-2024",
-                description: "Led workshops on web development and organized tech events for 200+ students.",
-                color: "from-blue-400 to-cyan-400",
-              },
-              {
-                title: "National Programming Contest",
-                award: "🎯 Top 50",
-                year: "2023",
-                description: "Ranked among top 50 participants in national level programming competition.",
+                title: "Hack-n-droid VIT Hackathon",
+                award: "🎯 Top 20",
+                year: "2025",
+                description: "Ranked in the top 20 out of 100+ teams for developing 'LexIntellect' — a Legal AI platform designed for contract analysis, clause extraction, and legal outcome prediction using NLP and BERT-based models.",
                 color: "from-green-400 to-emerald-400",
               },
               {
-                title: "Open Source Contribution",
-                award: "🚀 Hacktoberfest",
-                year: "2023",
-                description: "Successfully contributed to 10+ open source projects during Hacktoberfest.",
+                title: "ACM Club SRM Hackathon",
+                award: "🎯 Top 10",
+                year: "2024",
+                description: "Ranked in the top 10 out of 70+ teams for building a Personal Medical Record platform with chatbot integration for seamless doctor access.",
                 color: "from-orange-400 to-red-400",
               },
             ].map((achievement, index) => (
@@ -902,7 +879,7 @@ export default function FuturisticPortfolio() {
                   </div>
                   <div>
                     <p className="contact-label">Phone</p>
-                    <p className="contact-value">+91 98765 43210</p>
+                    <p className="contact-value">+91 93536 45710</p>
                   </div>
                 </div>
 
@@ -918,28 +895,52 @@ export default function FuturisticPortfolio() {
               </div>
 
               <div className="flex space-x-4 mt-8">
-                <Button className="social-btn linkedin">
-                  <Linkedin className="h-6 w-6" />
-                </Button>
-                <Button className="social-btn github">
-                  <Github className="h-6 w-6" />
-                </Button>
-                <Button className="social-btn email">
-                  <Mail className="h-6 w-6" />
-                </Button>
+                {/* <a href="https://linkedin.com/in/raamiz" target="_blank" rel="noopener noreferrer">
+                  <Button className="social-btn linkedin">
+                    <Linkedin className="h-6 w-6" />
+                  </Button>
+                </a>
+
+                <a href="https://github.com/raamizhussain" target="_blank" rel="noopener noreferrer">
+                  <Button className="social-btn github">
+                    <Github className="h-6 w-6" />
+                  </Button>
+                </a>
+
+                <a href="mailto:raamizhs@gmail.com">
+                  <Button className="social-btn email">
+                    <Mail className="h-6 w-6" />
+                  </Button>
+                </a> */}
+
               </div>
             </div>
 
             <div className="contact-form-container">
-              <form className="contact-form">
+              <form
+                className="contact-form"
+                action="https://formspree.io/f/xqabvvna"
+                method="POST"
+              >
                 <div className="form-group">
                   <label className="form-label">Name</label>
-                  <Input className="futuristic-input" placeholder="Your awesome name" />
+                  <Input
+                    className="futuristic-input"
+                    placeholder="Your awesome name"
+                    name="name"
+                    required
+                  />
                 </div>
 
                 <div className="form-group">
                   <label className="form-label">Email</label>
-                  <Input type="email" className="futuristic-input" placeholder="your.email@example.com" />
+                  <Input
+                    type="email"
+                    className="futuristic-input"
+                    placeholder="your.email@example.com"
+                    name="email"
+                    required
+                  />
                 </div>
 
                 <div className="form-group">
@@ -948,15 +949,21 @@ export default function FuturisticPortfolio() {
                     className="futuristic-textarea"
                     placeholder="Tell me about your amazing project idea..."
                     rows={6}
+                    name="message"
+                    required
                   />
                 </div>
 
-                <Button className="futuristic-btn futuristic-btn-primary w-full text-lg py-4">
+                <Button
+                  type="submit"
+                  className="futuristic-btn futuristic-btn-primary w-full text-lg py-4"
+                >
                   <Rocket className="mr-3 h-6 w-6" />
                   Launch Message 🚀
                 </Button>
               </form>
             </div>
+
           </div>
         </div>
       </section>
@@ -972,22 +979,35 @@ export default function FuturisticPortfolio() {
               <p className="text-slate-400 text-lg">Building the future, one line of code at a time.</p>
             </div>
 
-            <div className="flex space-x-6">
-              <Button className="social-btn linkedin">
-                <Linkedin className="h-6 w-6" />
-              </Button>
-              <Button className="social-btn github">
-                <Github className="h-6 w-6" />
-              </Button>
-              <Button className="social-btn email">
-                <Mail className="h-6 w-6" />
-              </Button>
-            </div>
+            <div className="flex space-x-4 mt-8">
+                <a href="https://linkedin.com/in/raamiz" target="_blank" rel="noopener noreferrer">
+                  <Button className="social-btn linkedin">
+                    <Linkedin className="h-6 w-6" />
+                  </Button>
+                </a>
+
+                <a href="https://github.com/raamizhussain" target="_blank" rel="noopener noreferrer">
+                  <Button
+                    className="social-btn github text-white"
+                    style={{ backgroundColor: "#2ea44f" }}
+                  >
+                    <Github className="h-6 w-6" />
+                  </Button>
+                </a>
+
+
+                {/* <a href="mailto:raamizhs@gmail.com">
+                  <Button className="social-btn email">
+                    <Mail className="h-6 w-6" />
+                  </Button>
+                </a> */}
+
+              </div>
           </div>
 
           <div className="border-t border-cyan-500/20 mt-12 pt-8 text-center">
             <div className="h-1 w-full bg-gradient-to-r from-transparent via-cyan-400 to-transparent glow-line mb-6"></div>
-            <p className="text-slate-400 text-lg">© 2025 Raamiz. All rights reserved. Made with 💙 and lots of ☕</p>
+            <p className="text-slate-400 text-lg">© 2025 Raamiz. All rights reserved. </p>
           </div>
         </div>
       </footer>
