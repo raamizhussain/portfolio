@@ -502,7 +502,16 @@ export default function FuturisticPortfolio() {
             {[
               
               {
-                title: "Fake News Detector (Coming Soon)",
+                title: "CrowdSafe: AI-Powered Emergency Response & Monitoring Platform",
+                description:
+                  "An AI-driven platform for real-time crowd monitoring and emergency response, featuring heatmaps, smart alerts, and predictive analytics for safer public events.",
+                tech: ["Python", "Computer Vision", "ML/DL", "NLP", "Geospatial AI"],
+                category: "Computer Vision",
+                featured: true,
+                code: "https://github.com/raamizhussain/AI-POWERED-CROWD-MONITORING-EMERGENCY-RESPONSE-PLATFORM-",
+              },
+              {
+                title: "Fake News Detector",
                 description:
                   "Detecting fake news using text, images and video with BERT, CNN, and Grad-CAM. Includes explainable predictions and a real-time dashboard.",
                 tech: ["Python", "BERT", "CNN", "Streamlit", "Grad-CAM"],
