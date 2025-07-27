@@ -257,7 +257,7 @@ export default function FuturisticPortfolio() {
               
               
               <a
-                href="https://drive.google.com/file/d/1StfQXKSdyf3wiOQ1oeirP3825gqKvLY2/view?usp=drive_link"
+                href="https://drive.google.com/file/d/14e4GlQ8wYktSrTfQBgX55IBHAJ8YtOik/view?usp=sharing"
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -356,7 +356,7 @@ export default function FuturisticPortfolio() {
                 </div>
 
                 <a
-                href="https://drive.google.com/file/d/1StfQXKSdyf3wiOQ1oeirP3825gqKvLY2/view?usp=drive_link"
+                href="https://drive.google.com/file/d/14e4GlQ8wYktSrTfQBgX55IBHAJ8YtOik/view?usp=sharing"
                 target="_blank"
                 rel="noopener noreferrer"
                 >
